@@ -45,7 +45,7 @@ body {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     .gradient-bg {
         background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
     }
@@ -54,8 +54,26 @@ body {
         background: #1e293b;
         border: 2px solid #334155;
     }
-}
+} */
 
 :root {
     color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: light; /* ainda deixa os controles claros */
+    background-color: #ffffff;
+    color: #000000;
+  }
+  body {
+    background-color: #ffffff!important;
+    color: #000000!important;
+  }
+}
+
+input, textarea, select, button {
+  background-color: #fff !important;
+  color: #000 !important;
+  border-color: #ccc !important;
 }
